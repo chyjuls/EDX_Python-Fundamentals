@@ -53,12 +53,46 @@ print(count)
 print()
 
 
-count_2 = 0
-for k in a_string:
-    if k != " ":
-        count_2 += 1
-print(count_2)
-average = count_2/count
-print(average)
+def average_word_length(my_string):
+    letter_count = 0
+    punct_1 = ['.', ',', '!', '?']
+    try:
+        word_count = len(my_string.split())
+        print(word_count)
+
+        for letter in my_string:
+            if letter in punct_1:
+                return "No words"
+            if letter in "abcdefghijklmnopqrstuvwxyz" or letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
+                letter_count += 1
+                # print(letter, letter_count)
+
+                return letter_count / word_count
+    except:
+        return "No string"
 
 
+print(average_word_length("Hi"))
+print(average_word_length("Hi, Lucy"))
+print(average_word_length("   What   big spaces  you    have!"))
+print(average_word_length(True))
+print(average_word_length("?!?!?! ... !"))
+print()
+
+dollar_fine = 0
+days_late = 15
+in_demand = True
+
+if days_late == 10:
+    dollar_fine = 10 * 1
+    print(dollar_fine)
+
+elif days_late > 10:
+    dollar_fine = (10 * 1) + (days_late - 10) * 2
+    print("$", dollar_fine)
+elif in_demand:
+    dollar_fine = (10 * 1) + (days_late - 10) * 2
+    dollar_fine = dollar_fine  * dollar_fine
+    print("$", dollar_fine)
+else:
+    print("$", dollar_fine)

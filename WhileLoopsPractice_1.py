@@ -108,3 +108,17 @@ for name1 in list1:
             print(name1)
 print()
 
+# find factorial using while loop:
+
+num = 6
+
+
+def Fact(num):
+    fact = i = 1
+    while i <= num:
+        fact = i * fact
+        i += 1
+    return fact
+
+
+print(Fact(num))

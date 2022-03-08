@@ -1,3 +1,6 @@
+import math
+
+
 def cherry_pie(song):
     if "Cherry" in song:
         print("Sheee's my cherry pie")
@@ -446,3 +449,13 @@ def has_a_vowel(a_str):
 
 
 has_a_vowel("atlanta")
+
+
+def numCombinations(n, r):
+    result = math.comb(n, r)
+    return result
+
+
+print(numCombinations(52, 2))
+print(numCombinations(10, 5))
+print(numCombinations(4, 1))
